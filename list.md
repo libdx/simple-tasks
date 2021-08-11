@@ -4,7 +4,7 @@
 
 ### Requirements:
 
-    - By default `list` should display list of files in current directory.
+- By default `list` should display list of files in current directory.
 
     ```shell
     ❯ list
@@ -22,18 +22,18 @@
     release.sh
     ```
 
-    - `list` should accept argument path to a directory which content to display (it might be last argument).
+- `list` should accept argument path to a directory which content to display (it might be last argument).
 
     ```shell
     ❯ list project/
     __init__.py  api  config.py  db  tests
     ```
 
-    - `list` should accept CLI the following options:
+- `list` should accept CLI the following options:
 
-        - -l, --list: display files in simple list (default behaviour)
+     - -l, --list: display files in simple list (default behaviour)
 
-        - -r, --reverse: display files in revers order
+     - -r, --reverse: display files in revers order
 
         ```shell
         ❯ list --reverse
@@ -45,20 +45,20 @@
         Pipfile
         manage.py
         Makefile
-        entrypoint.sh*
+        entrypoint.sh
         Dockerfile.prod
         Dockerfile
         docker-compose.yml
         ```
 
-        - -d, --dirs: display directories with trailing slach '/' (like `project/`):
+     - -d, --dirs: display directories with trailing slach '/' (like `project/`):
 
         ```shell
         ❯ list -d
         docker-compose.yml
         Dockerfile
         Dockerfile.prod
-        entrypoint.sh*
+        entrypoint.sh
         Makefile
         manage.py
         Pipfile
@@ -69,7 +69,7 @@
         release.sh
         ```
 
-        - -g, --grid: display files in grid maximizing horizontal space (quite complicated to do leave it for later):
+     - -g, --grid: display files in grid maximizing horizontal space (quite complicated leave it for later):
 
         ```shell
         ❯ list -g
@@ -77,9 +77,9 @@
         Dockerfile          entrypoint.sh    manage.py  Pipfile.lock  pyproject.toml  release.sh
         ```
 
-    - options should be composible:
+- options should be composible:
 
-        - more simple, support composition of long options:
+     - more simple, support composition of long options:
 
         ```shell
         ❯ list --dirs --reverse
@@ -91,13 +91,13 @@
         Pipfile
         manage.py
         Makefile
-        entrypoint.sh*
+        entrypoint.sh
         Dockerfile.prod
         Dockerfile
         docker-compose.yml
         ```
 
-        - more complicated, support composition of short options:
+     - more complicated, support composition of short options:
         ```shell
         ❯ list -dr
         release.sh
@@ -108,7 +108,7 @@
         Pipfile
         manage.py
         Makefile
-        entrypoint.sh*
+        entrypoint.sh
         Dockerfile.prod
         Dockerfile
         docker-compose.yml
